@@ -8,7 +8,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background: url(/bg.jpg) no-repeat;
+    background: url(img/bg.jpg) no-repeat;
     background-size: cover;
     padding: 3em;
 }
