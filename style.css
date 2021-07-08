@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+* {
+    box-sizing: border-box;
+    font-family: "raleway", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: url(/bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 3em;
+}
+
+.container {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid 1px black;
+    border-radius: 30px;
+    box-shadow: inset 10px 20px 20px rgba(255, 255, 255, 0.25), inset -10px -20px 20px rgba(0, 0, 0, 0.75);
+    margin: 1em auto;
+    padding: 2em;
+    text-align: center;
+    color: white;
+}
+
+.players {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em;
+}
+
+.player1,
+.player2 {
+    padding: 1em;
+    transition: all 1s 0.25s;
+    border-radius: 10px;
+}
+
+.player1 {
+    border: solid 1px white;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #cccccc;
+    font-size: 1.125rem;
+    font-weight: 600;
+    box-shadow: inset 8px 8px 8px rgba(255, 255, 255, 0.25), inset -8px -8px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+
+/* dice styling ------------------------ */
+
+.dice {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    perspective: 160px;
+}
+
+.cube {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-40px);
+    transition: transform 0.5s;
+}
+
+.show-1 {
+    transform: translateZ(-40px) rotateY(0deg);
+}
+
+.show-3 {
+    transform: translateZ(-40px) rotateY(-90deg);
+}
+
+.show-2 {
+    transform: translateZ(-40px) rotateY(-180deg);
+}
+
+.show-4 {
+    transform: translateZ(-40px) rotateY(90deg);
+}
+
+.show-5 {
+    transform: translateZ(-40px) rotateX(-90deg);
+}
+
+.show-6 {
+    transform: translateZ(-40px) rotateX(90deg);
+}
+
+.cube__face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    background: #cccccc;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.5), inset -2px -2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cube__face--1 {
+    transform: rotateY(0deg) translateZ(40px);
+}
+
+.cube__face--3 {
+    transform: rotateY(90deg) translateZ(40px);
+}
+
+.cube__face--2 {
+    transform: rotateY(180deg) translateZ(40px);
+}
+
+.cube__face--4 {
+    transform: rotateY(-90deg) translateZ(40px);
+}
+
+.cube__face--5 {
+    transform: rotateX(90deg) translateZ(40px);
+}
+
+.cube__face--6 {
+    transform: rotateX(-90deg) translateZ(40px);
+}
